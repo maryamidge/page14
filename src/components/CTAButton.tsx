@@ -46,8 +46,8 @@ export const CTAButton: React.FC<CTAButtonProps> = ({
       style={{ padding: '16px 162px' }}
       aria-label="Create account and start building"
     >
-      <span className="text-[#F8F1EC] text-center text-base font-semibold leading-6 uppercase relative max-sm:text-sm">
-        {loading ? 'BUILDING...' : 'LET\'S BUILD!'}
+      <span className="text-[#F8F1EC] text-center text-base font-semibold leading-6 uppercase relative max-sm:text-sm font-[Poppins]" style={{ fontWeight: 600, fontSize: '16px', lineHeight: '24px' }}>
+        {loading ? 'BUILDING...' : "LET'S BUILD!"}
       </span>
       {loading && (
         <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-[#F8F1EC]" />
