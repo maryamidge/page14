@@ -6,6 +6,7 @@ interface RuleCardProps {
   description: string;
   borderColor: string;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 export const RuleCard: React.FC<RuleCardProps> = ({ 
@@ -13,12 +14,13 @@ export const RuleCard: React.FC<RuleCardProps> = ({
   title, 
   description, 
   borderColor, 
-  className = '' 
+  className = '',
+  style
 }) => {
   return (
     <article 
       className={`flex w-[382px] flex-col items-start gap-2.5 shadow-[0_4px_4px_0_rgba(0,0,0,0.05)] h-[79px] border bg-white p-4 rounded-3xl border-solid max-md:w-[calc(100%_-_32px)] max-sm:w-[calc(100%_-_24px)] ${className}`}
-      style={{ borderColor }}
+      style={{ borderColor, ...style }}
     >
       <div className="flex h-[47px] items-center self-stretch relative">
         <div className="flex h-[47px] items-center gap-1 flex-[1_0_0] relative pl-4">
